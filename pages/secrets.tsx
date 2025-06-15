@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db, auth } from "../src/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { collection, addDoc, query, orderBy, onSnapshot, updateDoc, doc } from "firebase/firestore";
+import { generateDailyNickname } from "../utils/nickname";
 
 export default function Secrets() {
   const [user, setUser] = useState(null);
@@ -18,18 +19,23 @@ export default function Secrets() {
 
   const submit = async () => {
     if (!content.trim()) return;
+    const nickname = generateDailyNickname(user?.uid || "anon");
     await addDoc(collection(db, "secrets"), {
       content,
-      email: user?.email || "익명",
-      likes: 0,
+      nickname,
+      reacts: { 공감: 0, 나도겪음: 0, 팩트아님: 0 },
       comments: [],
       timestamp: Date.now()
     });
     setContent("");
   };
 
-  const like = async (id, current) => {
-    await updateDoc(doc(db, "secrets", id), { likes: current + 1 });
+  const react = async (id, type) => {
+    const postRef = doc(db, "secrets", id);
+    const post = secrets.find(s => s.id === id);
+    await updateDoc(postRef, {
+      reacts: { ...post.reacts, [type]: post.reacts[type] + 1 }
+    });
   };
 
   const comment = async (id) => {
@@ -42,7 +48,7 @@ export default function Secrets() {
 
   return (
     <div className="p-6 max-w-xl mx-auto space-y-6">
-      <h1 className="text-2xl font-bold">📝 비밀 피드</h1>
+      <h1 className="text-2xl font-bold">📝 고인물의 속삭임</h1>
       {user ? (
         <div className="space-y-2">
           <textarea
@@ -62,10 +68,12 @@ export default function Secrets() {
         {secrets.map((s: any) => (
           <div key={s.id} className="border rounded p-4 bg-white shadow">
             <p className="text-gray-700 whitespace-pre-wrap">{s.content}</p>
-            <p className="text-xs text-gray-400 mt-2">by {s.email}</p>
-            <div className="text-sm mt-2 flex items-center gap-4">
-              <button onClick={() => like(s.id, s.likes)} className="text-pink-500">❤️ {s.likes}</button>
-              <button onClick={() => comment(s.id)} className="text-blue-500">💬 댓글 ({s.comments.length})</button>
+            <p className="text-xs text-gray-400 mt-2">by {s.nickname}</p>
+            <div className="text-sm mt-2 flex items-center gap-4 flex-wrap">
+              <button onClick={() => react(s.id, "공감")} className="text-pink-500">👍 공감 ({s.reacts?.공감 ?? 0})</button>
+              <button onClick={() => react(s.id, "나도겪음")} className="text-blue-500">😮 나도 겪음 ({s.reacts?.나도겪음 ?? 0})</button>
+              <button onClick={() => react(s.id, "팩트아님")} className="text-yellow-600">❌ 팩트 아님 ({s.reacts?.팩트아님 ?? 0})</button>
+              <button onClick={() => comment(s.id)} className="text-gray-700">💬 댓글 ({s.comments.length})</button>
             </div>
             {s.comments.length > 0 && (
               <ul className="mt-2 pl-4 list-disc text-sm text-gray-600">
