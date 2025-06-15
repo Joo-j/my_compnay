@@ -1,0 +1,5 @@
+<!-- Placeholder SVG for empty state UI -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="80" fill="#cbd5e1"/>
+  <text x="50%" y="50%" text-anchor="middle" fill="#475569" font-size="20px" dy=".3em">No Data</text>
+</svg>
