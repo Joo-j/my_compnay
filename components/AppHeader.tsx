@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 import { auth } from "../src/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -12,10 +12,9 @@ export default function AppHeader() {
   }, [dark]);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    return onAuthStateChanged(auth, (user) => {
       setUserEmail(user?.email ?? null);
     });
-    return unsubscribe;
   }, []);
 
   return (
