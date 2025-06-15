@@ -1,100 +1,77 @@
-import { useEffect, useState } from 'react';
-import { db, auth } from '../src/firebase';
-import {
-  addDoc,
-  collection,
-  serverTimestamp,
-  query,
-  orderBy,
-  onSnapshot,
-  doc,
-  updateDoc,
-  increment
-} from 'firebase/firestore';
-import { onAuthStateChanged } from 'firebase/auth';
+import { useEffect, useState } from "react";
+import { db, auth } from "../src/firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { collection, addDoc, query, orderBy, onSnapshot, updateDoc, doc } from "firebase/firestore";
 
 export default function Secrets() {
-  const [input, setInput] = useState('');
-  const [posts, setPosts] = useState<any[]>([]);
-  const [commentInputs, setCommentInputs] = useState<Record<string, string>>({});
-  const [userId, setUserId] = useState<string | null>(null);
+  const [user, setUser] = useState(null);
+  const [content, setContent] = useState("");
+  const [secrets, setSecrets] = useState([]);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (user) => {
-      if (user) setUserId(user.uid);
-    });
-    return () => unsub();
-  }, []);
-
-  useEffect(() => {
+    onAuthStateChanged(auth, (u) => setUser(u));
     const q = query(collection(db, "secrets"), orderBy("timestamp", "desc"));
-    const unsub = onSnapshot(q, snapshot => {
-      setPosts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    });
-    return () => unsub();
+    return onSnapshot(q, (snap) =>
+      setSecrets(snap.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+    );
   }, []);
 
-  const submitPost = async () => {
-    if (!input.trim()) return;
+  const submit = async () => {
+    if (!content.trim()) return;
     await addDoc(collection(db, "secrets"), {
-      text: input.trim(),
-      userId,
-      timestamp: serverTimestamp(),
+      content,
+      email: user?.email || "익명",
       likes: 0,
-      comments: []
+      comments: [],
+      timestamp: Date.now()
     });
-    setInput('');
+    setContent("");
   };
 
-  const like = async (id: string) => {
-    const ref = doc(db, "secrets", id);
-    await updateDoc(ref, { likes: increment(1) });
+  const like = async (id, current) => {
+    await updateDoc(doc(db, "secrets", id), { likes: current + 1 });
   };
 
-  const comment = async (id: string) => {
-    const text = commentInputs[id];
-    if (!text?.trim()) return;
-    const ref = doc(db, "secrets", id);
-    const post = posts.find(p => p.id === id);
-    await updateDoc(ref, { comments: [...(post.comments || []), text.trim()] });
-    setCommentInputs({ ...commentInputs, [id]: '' });
+  const comment = async (id) => {
+    const text = prompt("댓글을 입력하세요");
+    if (!text) return;
+    const postRef = doc(db, "secrets", id);
+    const entry = secrets.find(s => s.id === id);
+    await updateDoc(postRef, { comments: [...entry.comments, text] });
   };
 
   return (
-    <div className="p-4 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">🔐 익명 비밀 피드</h1>
-      <textarea
-        className="w-full border p-2 mb-2"
-        placeholder="비밀을 작성해보세요"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <button className="w-full bg-indigo-500 text-white py-2 rounded" onClick={submitPost}>
-        익명 작성
-      </button>
-      <div className="mt-6 space-y-4">
-        {posts.map(post => (
-          <div key={post.id} className="bg-white shadow p-4 rounded">
-            <div>{post.text}</div>
-            <div className="text-sm mt-2 flex gap-4 items-center">
-              <button onClick={() => like(post.id)}>❤️ {post.likes}</button>
+    <div className="p-6 max-w-xl mx-auto space-y-6">
+      <h1 className="text-2xl font-bold">📝 비밀 피드</h1>
+      {user ? (
+        <div className="space-y-2">
+          <textarea
+            className="w-full border p-2 rounded"
+            rows={3}
+            placeholder="비밀을 입력하세요..."
+            value={content}
+            onChange={e => setContent(e.target.value)}
+          />
+          <button onClick={submit} className="bg-indigo-500 text-white px-4 py-2 rounded">작성</button>
+        </div>
+      ) : (
+        <p className="text-sm text-gray-500">로그인 후 작성할 수 있어요!</p>
+      )}
+
+      <div className="space-y-4">
+        {secrets.map((s: any) => (
+          <div key={s.id} className="border rounded p-4 bg-white shadow">
+            <p className="text-gray-700 whitespace-pre-wrap">{s.content}</p>
+            <p className="text-xs text-gray-400 mt-2">by {s.email}</p>
+            <div className="text-sm mt-2 flex items-center gap-4">
+              <button onClick={() => like(s.id, s.likes)} className="text-pink-500">❤️ {s.likes}</button>
+              <button onClick={() => comment(s.id)} className="text-blue-500">💬 댓글 ({s.comments.length})</button>
             </div>
-            <div className="mt-2">
-              <input
-                className="border p-1 w-full"
-                placeholder="댓글 입력..."
-                value={commentInputs[post.id] || ''}
-                onChange={(e) => setCommentInputs({ ...commentInputs, [post.id]: e.target.value })}
-              />
-              <button className="text-xs mt-1 bg-gray-700 text-white px-2 py-1 rounded" onClick={() => comment(post.id)}>
-                댓글 작성
-              </button>
-              <ul className="mt-2 space-y-1 text-sm text-gray-600">
-                {(post.comments || []).map((c: string, i: number) => (
-                  <li key={i}>💬 {c}</li>
-                ))}
+            {s.comments.length > 0 && (
+              <ul className="mt-2 pl-4 list-disc text-sm text-gray-600">
+                {s.comments.map((c: any, i: number) => <li key={i}>{c}</li>)}
               </ul>
-            </div>
+            )}
           </div>
         ))}
       </div>

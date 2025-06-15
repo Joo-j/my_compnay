@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { auth } from '../src/firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { useRouter } from 'next/router';
 
 export default function Login() {
@@ -14,14 +14,13 @@ export default function Login() {
       alert("📧 이메일 형식이 올바르지 않아요!");
       return;
     }
-
     try {
       if (signup) {
         await createUserWithEmailAndPassword(auth, email, password);
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
-      router.push('/');
+      router.push('/secrets');
     } catch (err: any) {
       alert(err.message);
     }
@@ -37,6 +36,9 @@ export default function Login() {
       </button>
       <button className="mt-2 text-sm underline text-blue-700" onClick={() => setSignup(!signup)}>
         {signup ? "이미 계정이 있어요" : "계정이 없어요"}
+      </button>
+      <button className="mt-4 text-xs text-red-500 underline" onClick={() => { signOut(auth); router.push("/"); }}>
+        로그아웃
       </button>
     </div>
   );
