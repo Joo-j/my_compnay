@@ -9,9 +9,10 @@ export default function LayoutWrapper({ children }: { children: ReactNode }) {
       <div className="p-4">
         <button
           onClick={() => router.push("/")}
-          className="text-blue-600 hover:underline mb-4 inline-block"
+          className="inline-flex items-center space-x-2 hover:opacity-80"
         >
-          ← 뒤로가기
+          <img src="/arrow-left.svg" alt="Back" className="w-5 h-5" />
+          <span className="sr-only">뒤로가기</span>
         </button>
       </div>
       <div className="p-4">{children}</div>
