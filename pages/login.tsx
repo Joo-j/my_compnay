@@ -10,6 +10,11 @@ export default function Login() {
   const router = useRouter();
 
   const submit = async () => {
+    if (!email.includes('@') || !email.includes('.')) {
+      alert("📧 이메일 형식이 올바르지 않아요!");
+      return;
+    }
+
     try {
       if (signup) {
         await createUserWithEmailAndPassword(auth, email, password);
@@ -17,7 +22,7 @@ export default function Login() {
         await signInWithEmailAndPassword(auth, email, password);
       }
       router.push('/');
-    } catch (err) {
+    } catch (err: any) {
       alert(err.message);
     }
   };
