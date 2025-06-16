@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom right,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+/* 공통 스타일 */
+.page-container {
+  @apply container mx-auto px-4 py-8;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-blue-600 text-white rounded-lg font-medium 
+         hover:bg-blue-700 active:bg-blue-800 transition-all duration-200
+         transform hover:scale-105 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium 
+         hover:bg-gray-300 active:bg-gray-400 transition-all duration-200
+         transform hover:scale-105 active:scale-95;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 
+         focus:ring-blue-500 focus:border-transparent outline-none
+         transition-all duration-200;
+}
+
+/* 애니메이션 */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 테마별 색상 */
+.theme-purple {
+  @apply bg-gradient-to-r from-purple-500 to-purple-600;
+}
+
+.theme-orange {
+  @apply bg-gradient-to-r from-orange-500 to-orange-600;
+}
+
+.theme-blue {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600;
+}
+
+.theme-green {
+  @apply bg-gradient-to-r from-green-500 to-green-600;
+}
+
+.theme-red {
+  @apply bg-gradient-to-r from-red-500 to-red-600;
+}
+
+.theme-yellow {
+  @apply bg-gradient-to-r from-yellow-500 to-yellow-600;
+}
+
+.theme-indigo {
+  @apply bg-gradient-to-r from-indigo-500 to-indigo-600;
+}
+
+.theme-teal {
+  @apply bg-gradient-to-r from-teal-500 to-teal-600;
+}
+
+.theme-pink {
+  @apply bg-gradient-to-r from-pink-500 to-pink-600;
+}
+
+.theme-cyan {
+  @apply bg-gradient-to-r from-cyan-500 to-cyan-600;
+}
+
+.theme-lime {
+  @apply bg-gradient-to-r from-lime-500 to-lime-600;
+}
