@@ -1,0 +1,538 @@
+[
+  {
+    "id": "1",
+    "name": "호석촌",
+    "category": "한식",
+    "distance": "석촌호수 서호 (석촌역 방향)",
+    "rating": 5.0,
+    "reviews": 3,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "석촌호수 서호 (석촌역 방향)",
+    "phone": "02-1234-5678",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "1-1", "name": "순대국", "price": 10000, "description": "기본 순대국", "spicy": false, "vegetarian": false },
+      { "id": "1-2", "name": "순대국 특", "price": 12000, "description": "특별 순대국", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["인기", "편육", "정식", "빨간 국물", "하얀 국물"],
+    "isFavorite": false,
+    "timeRequired": "15-20분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "편육도 같이먹을 수 있는 정식 강추. 기본이 빨간 국물. 하얀 국물로 시킬 수도 있어요",
+    "userReviews": [
+      "로완 : 호석촌 덕분에 회사 다닐 맛이 난다.",
+      "쵸파 : 이장우? 다시 보인다",
+      "아리 : 국물이 깊고 진한 스타일의 국밥"
+    ],
+    "lat": 37.5665,
+    "lng": 126.9780
+  },
+  {
+    "id": "2",
+    "name": "서보",
+    "category": "태국",
+    "distance": "송리단길",
+    "rating": 5.0,
+    "reviews": 1,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "송리단길",
+    "phone": "02-2345-6789",
+    "openingHours": "11:00 - 22:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "2-1", "name": "태국음식", "price": 0, "description": "태국 음식", "spicy": true, "vegetarian": false }
+    ],
+    "tags": ["태국", "웨이팅", "포장 가능"],
+    "isFavorite": false,
+    "timeRequired": "0분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "평일 낮에도 웨이팅이 있음. 포장은 바로 됨"
+  },
+  {
+    "id": "3",
+    "name": "팡즈",
+    "category": "홍콩",
+    "distance": "송리단길",
+    "rating": 5.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "송리단길",
+    "phone": "02-3456-7890",
+    "openingHours": "11:00 - 22:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "3-1", "name": "유포면", "price": 12000, "description": "홍콩 유포면", "spicy": false, "vegetarian": false },
+      { "id": "3-2", "name": "완탕면", "price": 12000, "description": "홍콩 완탕면", "spicy": false, "vegetarian": false },
+      { "id": "3-3", "name": "볶음면", "price": 12000, "description": "홍콩 볶음면", "spicy": true, "vegetarian": false }
+    ],
+    "tags": ["홍콩", "믿먹", "유포면", "완탕면", "볶음면"],
+    "isFavorite": false,
+    "timeRequired": "15-20분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "유포면, 완탕면, 대표 볶음면(이름 기억안남) 믿먹",
+    "userReviews": [
+      "레나 : 맛있는데! 걸어가면 땀남ㅜ"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "오비베어",
+    "category": "한식",
+    "distance": "방이동",
+    "rating": 5.0,
+    "reviews": 3,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "방이동",
+    "phone": "02-4567-8901",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "저렴",
+    "menus": [
+      { "id": "4-1", "name": "한식뷔페", "price": 9000, "description": "한식 뷔페", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["뷔페", "커피", "요구르트", "라면", "월요일 치킨", "시원함"],
+    "isFavorite": false,
+    "timeRequired": "10-12분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "메뉴 매일 바뀜, 커피,요구르트,라면 공짜, 매장 시원함, 월요일 치킨",
+    "userReviews": [
+      "칼슨 : 8월까지 잘 부탁해 / 슈퍼센트 공식 구내식당",
+      "브리 : 흡족"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "홍대쌀국수",
+    "category": "베트남",
+    "distance": "롯데백화점 제타플렉스 6층",
+    "rating": 4.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데백화점 제타플렉스 6층",
+    "phone": "02-5678-9012",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "저렴",
+    "menus": [
+      { "id": "5-1", "name": "베트남 쌀국수", "price": 8000, "description": "베트남 쌀국수", "spicy": false, "vegetarian": false },
+      { "id": "5-2", "name": "불고기 볶음밥", "price": 12000, "description": "불고기 볶음밥", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["베트남", "쉐어 가능", "서비스"],
+    "isFavorite": false,
+    "timeRequired": "10-15분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "둘이서 메뉴 3개 시켜서 쉐어 가능",
+    "userReviews": [
+      "불고기 볶음밥이 맛있다. / 서비스 잘 주심"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "슬로우캘리",
+    "category": "샐러드",
+    "distance": "송리단길",
+    "rating": 4.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "송리단길",
+    "phone": "02-6789-0123",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "6-1", "name": "포케", "price": 10500, "description": "포케", "spicy": false, "vegetarian": true },
+      { "id": "6-2", "name": "샐러드", "price": 8400, "description": "샐러드", "spicy": false, "vegetarian": true },
+      { "id": "6-3", "name": "포케 메밀면", "price": 15500, "description": "포케 메밀면", "spicy": false, "vegetarian": true }
+    ],
+    "tags": ["포케", "샐러드", "메밀면", "변경 가능"],
+    "isFavorite": false,
+    "timeRequired": "10-15분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "포케는 10500~, 포케 메밀면,샐러드 변경 가능",
+    "userReviews": [
+      "브리 : 빠르게 나오는 편. ㄹㅇ 패스트푸드",
+      "쵸파 : 샐러디보다 맛있다"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "은희네 해장국",
+    "category": "한식",
+    "distance": "호석촌 근처",
+    "rating": 4.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "호석촌 근처",
+    "phone": "02-7890-1234",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "7-1", "name": "해장국", "price": 12000, "description": "해장국", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["해장국", "무한리필"],
+    "isFavorite": false,
+    "timeRequired": "15-20분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "제일 싼 메뉴가 해장국 12000원",
+    "userReviews": [
+      "크로스 : 맛있고 밥 무한리필"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "동대문닭한마리",
+    "category": "한식",
+    "distance": "방이동",
+    "rating": 4.5,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "방이동",
+    "phone": "02-8901-2345",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "저렴",
+    "menus": [
+      { "id": "8-1", "name": "닭칼국수", "price": 9000, "description": "닭칼국수", "spicy": false, "vegetarian": false },
+      { "id": "8-2", "name": "초계국수", "price": 17000, "description": "초계국수", "spicy": false, "vegetarian": false },
+      { "id": "8-3", "name": "검은콩국수", "price": 17000, "description": "검은콩국수", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["닭한마리", "칼국수", "계절메뉴"],
+    "isFavorite": false,
+    "timeRequired": "8-11분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "계절메뉴로 초계국수, 검은콩국수 파는중",
+    "userReviews": [
+      "브리 : 점심특선 양도 넉넉하고 맛있음",
+      "쵸파 : 닭한마리 맛집, 칼국수를 꼭 먹어라."
+    ]
+  },
+  {
+    "id": "9",
+    "name": "오레노라멘",
+    "category": "일식",
+    "distance": "롯데월드몰 5층",
+    "rating": 4.5,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데월드몰 5층",
+    "phone": "02-9012-3456",
+    "openingHours": "11:00 - 22:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "9-1", "name": "라멘", "price": 12000, "description": "라멘", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["라멘", "웨이팅", "리필"],
+    "isFavorite": false,
+    "timeRequired": "5-7분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "웨이팅 복불복/밥,면 리필",
+    "userReviews": [
+      "백비 : 배고플 때 여기가면 되겠다",
+      "쵸파 : 배터짐"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "보승회관",
+    "category": "한식",
+    "distance": "방이동 초입",
+    "rating": 4.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "방이동 초입",
+    "phone": "02-0123-4567",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "10-1", "name": "국밥", "price": 11000, "description": "국밥", "spicy": false, "vegetarian": false },
+      { "id": "10-2", "name": "냉면", "price": 12000, "description": "냉면", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["국밥", "체인점", "냉면"],
+    "isFavorite": false,
+    "timeRequired": "7-10분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "무난한 국밥 체인점",
+    "userReviews": [
+      "칼슨 : 냉면도 무난해서 더울 때 가기 좋을 듯"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "만옥",
+    "category": "중식",
+    "distance": "롯데월드몰 지하1층",
+    "rating": 4.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데월드몰 지하1층",
+    "phone": "02-1234-5679",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "11-1", "name": "중식", "price": 11000, "description": "중식", "spicy": true, "vegetarian": false },
+      { "id": "11-2", "name": "짬뽕", "price": 15000, "description": "짬뽕", "spicy": true, "vegetarian": false },
+      { "id": "11-3", "name": "군만두", "price": 15000, "description": "군만두", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["중식", "짬뽕", "군만두", "순정 메뉴"],
+    "isFavorite": false,
+    "timeRequired": "4-5분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "",
+    "userReviews": [
+      "백비 : 짬뽕은 만리장성보다 훨씬 낫다",
+      "아리 : 군만두 맛집! 순정 메뉴들이 맛있음"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "멘야하나비",
+    "category": "일식",
+    "distance": "송리단길 초입",
+    "rating": 4.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "송리단길 초입",
+    "phone": "02-2345-6780",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "12-1", "name": "마제소바", "price": 11000, "description": "마제소바", "spicy": false, "vegetarian": false },
+      { "id": "12-2", "name": "라멘", "price": 14000, "description": "라멘", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["일식", "마제소바", "라멘"],
+    "isFavorite": false,
+    "timeRequired": "0분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "월,화 휴무",
+    "userReviews": [
+      "크로스 : 맛있다",
+      "쿠퍼 : 맛있음22"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "미엔아이",
+    "category": "중식",
+    "distance": "송리단길",
+    "rating": 4.0,
+    "reviews": 3,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "송리단길",
+    "phone": "02-3456-7891",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "저렴",
+    "menus": [
+      { "id": "13-1", "name": "우육면", "price": 9500, "description": "우육면", "spicy": false, "vegetarian": false },
+      { "id": "13-2", "name": "마파오무라이스", "price": 10500, "description": "마파오무라이스", "spicy": true, "vegetarian": false },
+      { "id": "13-3", "name": "마라오무라이스", "price": 10500, "description": "마라오무라이스", "spicy": true, "vegetarian": false }
+    ],
+    "tags": ["중식", "우육면", "마파오무라이스", "마라오무라이스"],
+    "isFavorite": false,
+    "timeRequired": "0분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "",
+    "userReviews": [
+      "크로스 : 맛있다",
+      "브리 : 마파오무라이스 좋은데 두부가 적은게 좀 아쉽. 멀어요",
+      "백비 : 마라오무라이스 G.O.A.T"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "지강한식당",
+    "category": "한식",
+    "distance": "KT송파빌딩 지하",
+    "rating": 4.0,
+    "reviews": 1,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "KT송파빌딩 지하",
+    "phone": "02-4567-8902",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "14-1", "name": "닭갈비", "price": 12000, "description": "닭갈비", "spicy": false, "vegetarian": false },
+      { "id": "14-2", "name": "낙곱새", "price": 19000, "description": "낙곱새", "spicy": true, "vegetarian": false }
+    ],
+    "tags": ["한식", "닭갈비", "낙곱새"],
+    "isFavorite": false,
+    "timeRequired": "0분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "음식 나오는데 오래걸리는 편",
+    "userReviews": [
+      "쵸파 : 맛은 있다"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "카렌",
+    "category": "일식",
+    "distance": "롯대백화점 B1 푸드코트",
+    "rating": 4.0,
+    "reviews": 1,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯대백화점 B1 푸드코트",
+    "phone": "02-5678-9013",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "15-1", "name": "철판 요리 덮밥", "price": 12900, "description": "철판 요리 덮밥", "spicy": false, "vegetarian": false },
+      { "id": "15-2", "name": "정식", "price": 16900, "description": "정식", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["일식", "철판", "덮밥", "정식"],
+    "isFavorite": false,
+    "timeRequired": "5-8분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "철판에 구운 메인요리와 밥, 국을 정식으로 먹을 수 있는 곳",
+    "userReviews": [
+      "아리 : 다 맛있었어요! 비싼게 흠"
+    ]
+  },
+  {
+    "id": "16",
+    "name": "RMW",
+    "category": "샌드위치",
+    "distance": "롯데백화점 지하1층",
+    "rating": 4.0,
+    "reviews": 1,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데백화점 지하1층",
+    "phone": "02-6789-0124",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "16-1", "name": "치아바타 샌드위치", "price": 0, "description": "치아바타 샌드위치", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["샌드위치", "치아바타"],
+    "isFavorite": false,
+    "timeRequired": "5-10분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "치아바타 샌드위치 팝니다",
+    "userReviews": [
+      "아리 : 바질토마토 맛있어요!"
+    ]
+  },
+  {
+    "id": "17",
+    "name": "촙촙",
+    "category": "베트남",
+    "distance": "롯데월드몰 지하 1층",
+    "rating": 3.0,
+    "reviews": 1,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데월드몰 지하 1층",
+    "phone": "02-7890-1235",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "17-1", "name": "베트남 음식", "price": 12000, "description": "베트남 음식", "spicy": false, "vegetarian": false },
+      { "id": "17-2", "name": "쌀국수", "price": 14000, "description": "쌀국수", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["베트남", "쌀국수"],
+    "isFavorite": false,
+    "timeRequired": "5분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "",
+    "userReviews": [
+      "아리 : 국물이 짭짤해서 맛있어요"
+    ]
+  },
+  {
+    "id": "18",
+    "name": "나나미 이자카야",
+    "category": "일식",
+    "distance": "방이동",
+    "rating": 3.0,
+    "reviews": 2,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "방이동",
+    "phone": "02-8901-2346",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "18-1", "name": "텐동", "price": 12000, "description": "텐동", "spicy": false, "vegetarian": false },
+      { "id": "18-2", "name": "사케동", "price": 12000, "description": "사케동", "spicy": false, "vegetarian": false },
+      { "id": "18-3", "name": "사시미 도시락", "price": 12000, "description": "사시미 도시락", "spicy": false, "vegetarian": false },
+      { "id": "18-4", "name": "카레", "price": 12000, "description": "카레", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["일식", "이자카야", "도시락"],
+    "isFavorite": false,
+    "timeRequired": "0분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "텐동/사케동/사시미 도시락/카레가 다 12000원 이내임. 밥은 초밥밥임다(이었는데 바뀜. 그냥 밥)_사시미, 사케 안될 때 많음",
+    "userReviews": [
+      "레나 : 안가면 후회함",
+      "아리 : 초심을 잃음"
+    ]
+  },
+  {
+    "id": "19",
+    "name": "어바웃 프로젝트",
+    "category": "샌드위치",
+    "distance": "롯데월드 타워 1층",
+    "rating": 3.0,
+    "reviews": 3,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데월드 타워 1층",
+    "phone": "02-9012-3457",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "저렴",
+    "menus": [
+      { "id": "19-1", "name": "샌드위치", "price": 7500, "description": "샌드위치", "spicy": false, "vegetarian": false },
+      { "id": "19-2", "name": "샐러드", "price": 14000, "description": "샐러드", "spicy": false, "vegetarian": true }
+    ],
+    "tags": ["샌드위치", "샐러드", "입주사 할인"],
+    "isFavorite": false,
+    "timeRequired": "3분",
+    "applePay": false,
+    "companyDiscount": true,
+    "notes": "샐러드 입주사 할인 10% 가능. 샌드위치는 안됨",
+    "userReviews": [
+      "아리 : 드라이토마토 맛있음",
+      "브리 :고구마샐러드 괜찮습니다. 칠리 파스타 샐러드는 간이 세서 일행분이 남기셨던 기억...",
+      "레나 : 배고파요"
+    ]
+  },
+  {
+    "id": "20",
+    "name": "브럭시",
+    "category": "샌드위치",
+    "distance": "롯데월드몰 지하1층",
+    "rating": 2.5,
+    "reviews": 3,
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    "address": "롯데월드몰 지하1층",
+    "phone": "02-0123-4568",
+    "openingHours": "11:00 - 21:00",
+    "priceRange": "보통",
+    "menus": [
+      { "id": "20-1", "name": "와플", "price": 10500, "description": "와플", "spicy": false, "vegetarian": false },
+      { "id": "20-2", "name": "샌드위치", "price": 12500, "description": "샌드위치", "spicy": false, "vegetarian": false }
+    ],
+    "tags": ["와플", "샌드위치", "포장 추가비용"],
+    "isFavorite": false,
+    "timeRequired": "3-4분",
+    "applePay": false,
+    "companyDiscount": false,
+    "notes": "단품이 12,000. 포장하면 200원 추가... 양아치",
+    "userReviews": [
+      "쵸파 : 우린 샌드위치가 만이천원인 시대에 살고있다.",
+      "브리 : 가성비 사망선고. 맛은 무난",
+      "레나 : 배고파요"
+    ]
+  }
+] 
